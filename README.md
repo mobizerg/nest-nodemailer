@@ -18,12 +18,14 @@
 
 **Yarn**
 ```bash
-yarn add @mobizerg/nest-nodemailer
+yarn add @mobizerg/nest-nodemailer nodemailer
+yarn add @types/nodemailer --dev
 ```
 
 **NPM**
 ```bash
-npm install @mobizerg/nest-nodemailer --save
+npm install @mobizerg/nest-nodemailer nodemailer --save
+npm install @types/nodemailer --save-dev
 ```
 
 ### Description
