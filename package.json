@@ -1,11 +1,16 @@
 {
   "name": "@mobizerg/nest-nodemailer",
   "description": "A Nodemailer integration module for nestjs framework",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Mobizerg",
   "license": "MIT",
   "main": "index.js",
-  "keywords": ["nestjs", "nodemailer", "typescript", "mobizerg"],
+  "keywords": [
+    "nestjs",
+    "nodemailer",
+    "typescript",
+    "mobizerg"
+  ],
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.json",
     "pre-commit": "lint-staged",
