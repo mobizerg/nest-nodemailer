@@ -1,59 +1,55 @@
 {
   "name": "@mobizerg/nest-nodemailer",
   "description": "A Nodemailer integration module for nestjs framework",
-  "version": "1.0.0",
-  "homepage": "https://github.com/mobizerg/nest-nodemailer",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mobizerg/nest-nodemailer.git"
-  },
+  "version": "1.0.1",
   "author": "Mobizerg",
   "license": "MIT",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "keywords": [
-    "nestjs",
-    "nodemailer",
-    "typescript",
-    "mobizerg"
-  ],
+  "keywords": ["nestjs", "nodemailer", "typescript", "mobizerg"],
   "scripts": {
-    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "build": "rimraf dist && tsc -p tsconfig.json",
     "pre-commit": "lint-staged",
     "pre-publish:npm": "npm run build",
     "publish:npm": "npm publish --access public"
   },
   "devDependencies": {
-    "@nestjs/common": "6.2.0",
-    "@nestjs/core": "6.2.0",
+    "@nestjs/common": "6.1.1",
+    "@nestjs/core": "6.1.1",
     "@types/lodash": "^4.14.130",
     "@types/node": "^12.0.2",
+    "@types/nodemailer": "^6.1.0",
     "husky": "^2.3.0",
     "lint-staged": "8.1.7",
     "prettier": "^1.17.1",
     "reflect-metadata": "^0.1.12",
     "rxjs": "6.5.2",
     "rxjs-compat": "6.5.2",
+    "lodash": "^4.17.11",
+    "rimraf": "^2.6.3",
     "nodemailer": "^6.1.1",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "ts-node": "^8.1.0"
   },
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "nodemailer": "^6.1.1"
   },
   "peerDependencies": {
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
     "reflect-metadata": "^0.1.12",
-    "rxjs": "^6.0.0",
-    "nodemailer": "^6.1.1"
+    "rxjs": "^6.0.0"
   },
   "lint-staged": {
     "*.ts": [
       "prettier --write",
       "git add"
     ]
+  },
+  "homepage": "https://github.com/mobizerg/nest-nodemailer",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mobizerg/nest-nodemailer.git"
   },
   "bugs": {
     "url": "https://github.com/mobizerg/nest-nodemailer/issues"
