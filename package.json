@@ -1,7 +1,9 @@
 {
   "name": "@mobizerg/nest-nodemailer",
-  "version": "1.0.0",
   "description": "A Nodemailer integration module for nestjs framework",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mobizerg/nest-nodemailer",
+  "repository": "git://github.com/mobizerg/nest-nodemailer",
   "author": "Mobizerg",
   "license": "MIT",
   "scripts": {
