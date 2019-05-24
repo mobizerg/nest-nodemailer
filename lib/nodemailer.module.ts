@@ -1,17 +1,14 @@
-import { DynamicModule, Inject, Module, OnModuleDestroy, Provider } from '@nestjs/common';
-import { ModuleRef } from '@nestjs/core';
-import * as Mail from 'nodemailer/lib/mailer';
-import { NodemailerModuleAsyncOptions, NodemailerModuleOptions, NodemailerOptionsFactory } from './interfaces';
-import { createNodemailerTransport } from './nodemailer-transport.provider';
-import { NODEMAILER_MODULE_OPTIONS } from './nodemailer.constant';
-import { getTransportToken } from './nodemailer.helper';
+import {DynamicModule, Inject, Module, Provider} from '@nestjs/common';
+import {NodemailerModuleAsyncOptions, NodemailerModuleOptions, NodemailerOptionsFactory} from './interfaces';
+import {createNodemailerTransport} from './nodemailer-transport.provider';
+import {NODEMAILER_MODULE_OPTIONS} from './nodemailer.constant';
+import {getTransportToken} from './nodemailer.helper';
 
 @Module({})
-export class NodemailerModule implements OnModuleDestroy {
+export class NodemailerModule {
 
   constructor(@Inject(NODEMAILER_MODULE_OPTIONS)
-              private readonly options: NodemailerModuleOptions,
-              private readonly moduleRef: ModuleRef) {}
+              private readonly options: NodemailerModuleOptions) {}
 
   static register(options: NodemailerModuleOptions): DynamicModule {
     return {
@@ -61,8 +58,8 @@ export class NodemailerModule implements OnModuleDestroy {
     };
   }
 
-  async onModuleDestroy() {
-    const transport = this.moduleRef.get<Mail>(getTransportToken(this.options.name));
-    transport && transport.close();
-  }
+  // async onModuleDestroy() {
+  //   const transport = this.moduleRef.get<Mail>(getTransportToken(this.options.name));
+  //   transport && transport.close();
+  // }
 }
