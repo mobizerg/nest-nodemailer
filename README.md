@@ -8,12 +8,6 @@
   A Nodemailer integration module for Nest.js framework.
 </p>
 
-<p align="center">
-  <a href="https://www.npmjs.com/~mobizerg"><img src="https://img.shields.io/npm/v/@mobizerg/mailer.svg" alt="NPM Version" /></a>
-  <a href="https://www.npmjs.com/~mobizerg"><img src="https://img.shields.io/npm/l/@mobizerg/mailer.svg" alt="Package License" /></a>
-  <a href="https://www.npmjs.com/~mobizerg"><img src="https://img.shields.io/npm/dm/@mobizerg/mailer.svg" alt="NPM Downloads" /></a>
-</p>
-
 ### Installation
 
 **Yarn**
